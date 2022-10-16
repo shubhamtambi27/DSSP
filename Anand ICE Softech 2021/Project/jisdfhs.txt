@@ -1,0 +1,25 @@
+CREATE TABLE `smartmart`.`items` ( `Item_code` INT(20) NOT NULL , `Item_name` VARCHAR(50) NOT NULL , `Price` DECIMAL(10.3) NOT NULL DEFAULT '0' , `Quantity` INT(10) NOT NULL DEFAULT '0' , PRIMARY KEY (`Item_code`), UNIQUE (`Item_name`)) ENGINE = MyISAM;
+
+INSERT INTO items(`Item_code`, `Item_name`, `Price`, `Quantity`) VALUES ('0001', 'Soap', '30', '50'), ('002', 'Biscuit', '15', '75'), ('003', 'Atta', '40.50', '150'), ('004', 'Milk', '42', '49'), ('005', 'Namkeen', '290', '60'), ('006', 'Wafers', '30', '18'), ('007', 'Sweets', '290', '45'), ('008', 'Salt', '20', '150'), ('009', 'Sugar', '35', '46'), ('010', 'Red Chilli', '56.35', '45')
+
+CREATE TABLE "carta01" (
+	"sr_no"	INTEGER,
+	"item_code"	INTEGER NOT NULL,
+	"item_name"	TEXT NOT NULL,
+	"quantity"	INTEGER DEFAULT 1,
+	"price"	INTEGER NOT NULL,
+	PRIMARY KEY("sr_no" AUTOINCREMENT)
+);
+
+
+
+<?php
+  $link = mysqli_connect('localhost', 'root');
+  if (!$link) {
+      die('Could not connect: ' . mysql_error());
+  }
+  echo "Connected Successfully";
+  ?>
+
+
+$link = mysqli_connect('localhost', 'root','','smartmart');

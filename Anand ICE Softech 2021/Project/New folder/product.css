@@ -1,0 +1,148 @@
+html,
+body {
+height: 100%;
+}
+body {
+margin: 0;
+background:#0e141e;
+font-family: sans-serif;
+font-weight: 100;
+}
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+table {
+width: 800px;
+border-collapse: collapse;
+overflow: hidden;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+padding: 15px;
+background-color: rgba(255, 255, 255, 0.2);
+color: #fff;
+}
+th {
+text-align: left;
+}
+thead th {
+background-color: #55608f;
+}
+tbody tr:hover {
+background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+position: relative;
+}
+tbody td:hover:before {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+top: -9999px;
+bottom: -9999px;
+background-color: rgba(255, 255, 255, 0.2);
+z-index: -1;
+}
+.button
+{
+background-color: rgba(255, 255, 255, 0.2);
+border: none;
+color: white;
+padding: 8px 55px;
+text-align: center;
+font-size: 35px;
+opacity: 0.6;
+transition: 0.3s;
+display: inline-block;
+text-decoration: none;
+cursor: pointer;
+border-radius: 12px;
+margin-left: 50px;
+}
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+a:link {
+color: white;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:visited {
+color: white;
+background-color: transparent;
+text-decoration: none;
+}
+
+a:hover {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:active {
+color: yellow;
+background-color: transparent;
+text-decoration: underline;
+}
+h2, button{
+  float: left;
+  margin: 10;
+}
+h2
+{
+margin-left: 420px;
+}
+.hidden {
+display:  ;
+}
+
+.modal {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 70%;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTBeZ8r6uKthGga2JrkFzAH1UnYjQz3OJvwKZwjS9GrGRDN1LsRB5K-Tmj5719Tu5ZA54&usqp=CAU");
+background-color: ;
+background-repeat: no-repeat;
+padding: 6rem;
+border-radius: 5px;
+box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+z-index: 10;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+backdrop-filter: blur(3px);
+z-index: 5;
+}
