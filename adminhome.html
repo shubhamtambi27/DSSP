@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin | Home </title>
+    <title>Faculty | Home </title>
     <link rel="icon" href="images/logo1.png" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,6 +52,7 @@
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
           <a href="#about" class="w3-bar-item w3-button">VIEW ATTENDANCE</a>
+          <a href="#about" class="w3-bar-item w3-button">TAKE ATTENDANCE</a>
           <a href="#team" class="w3-bar-item w3-button"
             ><i class="fa fa-user"></i> UPDATE PROFILE</a
           >
@@ -85,8 +86,11 @@
         >Close ×</a
       >
       <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"
-        >VIEW ATTENDANCE</a
+        >TAKE ATTENDANCE</a
       >
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"
+      >VIEW ATTENDANCE</a
+    >
       <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"
         >UPDATE PROFILE</a
       >
@@ -100,17 +104,17 @@
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
       <div class="w3-display-left w3-text-white" style="padding: 48px">
-        <span class="w3-jumbo w3-hide-small">Welcome Admin</span
+        <span class="w3-jumbo w3-hide-small">Welcome Faculty</span
         ><br />
         <span class="w3-xxlarge w3-hide-large w3-hide-medium"
-          >Welcome Admin</span
+          >Welcome Faculty</span
         ><br />
-      
+       
         <p>
           <a
             href="#about"
             class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off"
-            >View/Update Details</a
+            >View / Modify Attendance</a
           >
         </p>
       </div>
@@ -126,93 +130,61 @@
 
     <!-- About Section -->
     <div class="w3-container" style="padding: 128px 16px" id="about">
-      <h3 class="w3-center">Welcome Admin</h3>
+      <h3 class="w3-center">WELCOME FACULTY</h3>
       
       <div class="w3-row-padding w3-center" style="margin-top: 64px">
       <a href="">  <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-          <p class="w3-large">View Attendance</p>
-         
-        </div></a>
-        <a href=""> <div class="w3-quarter">
-          <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Total Headcount</p>
-          
-        </div></a>
-        <a href=""><div class="w3-quarter">
-          <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">View Profile</p>
-         
-        </div></a>
-        <a href=""> <div class="w3-quarter">
-          <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Update Profile</p>
-         
-           </div></a>
-        <a href=""> <div class="w3-quarter">
-          <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Previous Records</p>
-          
-           </div></a>
-        <a href=""> <div class="w3-quarter">
-          <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
           <p class="w3-large">Take Attendance</p>
-          
-           </div></a>
+         
+        </div></a>
         <a href=""> <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Trigger Updates</p>
+          <p class="w3-large">View Attendance</p>
           
-           </div></a>
+        </div></a>
+        <a href=""><div class="w3-quarter">
+          <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Modify Attendance</p>
+          
+        </div></a>
         <a href=""> <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Send E-Mail Updates</p>
+          <p class="w3-large">Send Attendace Updates</p>
           
         </div> </a>
       </div>
     </div>
 
 
-<!--
 
-    <div class="w3-container" style="padding: 28px 16px" id="about">
+
+    <div class="w3-container" style="padding: 16px 16px" id="about">
       
       <div class="w3-row-padding w3-center" style="margin-top: 64px">
       <a href="">  <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-          <p class="w3-large">View Attendance</p>
-          <p>
-            No limit to the size of screen with us.
-            #responsivewebsite
-          </p>
+          <p class="w3-large">Real Time Attendance</p>
+          
         </div></a>
         <a href=""> <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">View Total Attendance</p>
-          <p>
-            We never loose passion to provide better services.
-            #passiondriven
-          </p>
+          <p class="w3-large">See Past Attendance </p>
+          
         </div></a>
         <a href=""><div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
           <p class="w3-large">View Profile</p>
-          <p>
-            Imagination beyind average.
-            #innovativedesigns
-          </p>
+         
         </div></a>
         <a href=""> <div class="w3-quarter">
           <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
           <p class="w3-large">Update Profile</p>
-          <p>
-            You will hesitate to do lot of things, but never hesitate to contact us.
-            #aimforhappycustomers
-          </p>
+         
         </div> </a>
       </div>
     </div>
-  -->
+  
     
     <!-- Work Section 
     <div class="w3-container" style="padding: 128px 16px" id="work">
