@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGIN AS</title>
+    <link
+      rel="icon"
+      href="{{url_for('static', filename='logo1.png')}}"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        background-image: url("{{url_for('static', filename='back-login.jpg')}}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      header {
+        padding: 25px;
+        text-align: center;
+        font-size: 50px;
+        color: #ffffff;
+        margin-left: 1px;
+      }
+      teacher {
+        padding-left: 100px;
+        margin-left: 190px;
+        cursor: pointer;
+        font-size: 45px;
+      }
+      admin {
+        padding-left: 100px;
+        margin-left: 60px;
+        cursor: pointer;
+        font-size: 45px;
+      }
+      student {
+        padding-left: 100px;
+        margin-left: 60px;
+        cursor: pointer;
+        font-size: 45px;
+      }
+
+      a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #f0fff0;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      footer {
+        background-color: #000;
+        color: #fff;
+        font-size: 14px;
+      }
+      .container {
+        width: 60%;
+        margin: auto;
+        overflow: hidden;
+      }
+      img {
+        width: 400px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        margin-left: 550px;
+      }
+      h1 {
+        color: #ffffff;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <br /><br />
+    <center><h1>Welcome to DSSP...</h1></center>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br />
+    <header>
+      <b>Login as</b>
+    </header>
+    <teacher>
+      <a href="/teacherlogin"><b>Teacher</b></a>
+    </teacher>
+    <admin>
+      <a href="/adminlogin"><b>System Admin</b></a>
+    </admin>
+    <student>
+      <a href="/studentlogin"><b>Student</b></a>
+    </student>
+    <br /><br /><br />
+  </body>
+</html>
