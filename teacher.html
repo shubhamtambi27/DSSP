@@ -48,7 +48,7 @@
                     type="submit"
                     class="form-control btn btn-primary submit px-3"
                     id="login_button"
-                    onclick="myfunction()"
+                    onclick="window.location.href = '/DSSP/teacherhome.html';"
                   >
                     Sign In
                   </button>
@@ -83,12 +83,13 @@
   function myfunction() {
     var mail = document.getElementById('email').value;
     var pwd = document.getElementById('password-field').value;
-    if (mail == '2019pietcsshruti160@poornima.org' && pwd == 'shruti123') {
+   /* if (mail == '2019pietcsshruti160@poornima.org' && pwd == 'shruti123') {
       alert("Faculty logged in ")
     } else {
       alert('Wrong ID/Password');
       location.reload();
     }
+    */
   }
   //Google Authentication button
   function onSignIn(googleUser) {
