@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>View Attendance</title>
+    <link
+      rel="icon"
+      href="{{url_for('static', filename='logo1.png')}}"
+      type="image/x-icon"
+    />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+    <style>
+      body {
+        background-position: center;
+        background-size: cover;
+        background-image: url("{{url_for('static', filename='back.jpg')}}");
+        min-height: 100%;
+      }
+      table,
+      th,
+      td {
+        text-align: center;
+        border: 3px solid white;
+        border-collapse: collapse;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 35px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="img js-fullheight">
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">Student's Attendance</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Section</th>
+          <th>Present</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td>{{ user[0] }}</td>
+          <td>{{ user[1] }}</td>
+          <td>{{ user[2] }}</td>
+          <td>{{ user[3] }}</td>
+          <td>{{ user[4] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>
