@@ -49,37 +49,34 @@
     </style>
   </head>
   <body>
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-      <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <img
-          src="{{url_for('static', filename='logo1.png')}}"
-          alt="Logo"
-          width="100"
-          height="60"
-        />
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small">
-          <a href="#about" class="w3-bar-item w3-button">VIEW ATTENDANCE</a>
-          <a href="#about" class="w3-bar-item w3-button">TAKE ATTENDANCE</a>
-          <a href="#team" class="w3-bar-item w3-button"
-            ><i class="fa fa-user"></i> UPDATE PROFILE</a
-          >
-          <a href="#contact" class="w3-bar-item w3-button"
-            ><i class="fa fa-user"></i> USER PROFILE</a
-          >
-        </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-        <a
-          href="javascript:void(0)"
-          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-          onclick="w3_open()"
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <img
+        src="{{url_for('static', filename='logo1.png')}}"
+        alt="Logo"
+        width="100"
+        height="60"
+      />
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="/viewattendance" class="w3-bar-item w3-button"
+          >VIEW ATTENDANCE</a
         >
-          <i class="fa fa-bars"></i>
-        </a>
+        <a href="/takephoto" class="w3-bar-item w3-button">TAKE ATTENDANCE</a>
       </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a
+        href="javascript:void(0)"
+        class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
+  </div>
+
 
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav
@@ -134,28 +131,23 @@
     </header>
 
     <!-- About Section -->
-    <div class="w3-container" style="padding: 128px 16px" id="about">
+    <div class="w3-container" style="padding: 128px 24px" id="about">
       <h3 class="w3-center">WELCOME ADMIN</h3>
 
       <div class="w3-row-padding w3-center" style="margin-top: 64px">
-        <a href="">
-          <div class="w3-quarter">
-            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-            <p class="w3-large">Previous Records</p>
-          </div></a
-        >
-        <a href="">
-          <div class="w3-quarter">
-            <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">Trigger Updates</p>
-          </div></a
-        >
+        
         <a href=""
           ><div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Total Headcount</p>
           </div></a
         >
+        <a href="/viewusers">
+          <div class="w3-quarter">
+            <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">View Users Record</p>
+          </div>
+        </a>
         <a href="">
           <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
@@ -163,37 +155,40 @@
           </div>
         </a>
       </div>
-    </div>
+    
 
-    <div class="w3-container" style="padding: 16px 16px" id="about">
+    <div class="w3-container" style="padding: 24px 24px" id="about">
       <div class="w3-row-padding w3-center" style="margin-top: 64px">
+
+
         <a href="">
           <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-            <p class="w3-large">View Attendance</p>
+            <p class="w3-large">Take Attendance</p>
           </div></a
         >
-        <a href="">
+        <a href="/viewattendance">
           <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">Take Attendance</p>
+            <p class="w3-large">View Attendance</p>
           </div></a
         >
         <a href=""
           ><div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">View Profile</p>
+            <p class="w3-large">Modify Attendance</p>
           </div></a
         >
-        <a href="">
-          <div class="w3-quarter">
-            <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
-            <p class="w3-large">Update Profile</p>
-          </div>
-        </a>
+        
+      </div>
+    </div>
       </div>
     </div>
 
+
+
+
+    
     <!-- Modal for full size images on click-->
     <div
       id="modal01"
