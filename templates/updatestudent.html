@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Student Record</title>
+    <link
+      rel="icon"
+      href="{{url_for('static', filename='logo1.png')}}"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        background-image: url("{{url_for('static', filename='back.jpg')}}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+      header {
+        padding: 25px;
+        text-align: center;
+        font-size: 50px;
+        color: white;
+        margin-left: 15px;
+      }
+      input[type="text"],
+      select {
+        width: 15%;
+        padding: 10px 20px;
+        margin-left: 50px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        width: 50%;
+        background-color: peachpuff;
+        padding: 14px 20px;
+        margin-left: 400px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      input[type="radio"] {
+        margin-left: 440px;
+      }
+      footer {
+        background-color: #000;
+        color: #fff;
+        font-size: 14px;
+      }
+      .container {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      z {
+        margin-left: 700px;
+      }
+      r {
+        color: white;
+      }
+      t {
+        margin-left: 330px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <b>Update Student Record by</b>
+    </header>
+    <div>
+      <form action="/updatedetails" method="post">
+        <input type="radio" id="detail" name="detail" value="name" />
+        <r
+          ><label for="name"><b>Name</b></label></r
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="radio" id="detail" name="detail" value="email" />
+        <r
+          ><label for="password"><b>Email</b></label></r
+        ><br /><br />
+        <input type="radio" id="detail" name="detail" value="password" />
+        <r
+          ><label for="roll"><b>Password</b></label></r
+        >
+        <input type="radio" id="detail" name="detail" value="Mobile" />
+        <r
+          ><label for="address"><b>Mobile</b></label></r
+        ><br /><br />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<t
+          ><label for="dvalue"
+            ><b>Enter the Desired value to be updated:</b></label
+          ></t
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <br /><z>
+          <textarea id="dvalue" name="dvalue" rows="6" cols="60"> </textarea
+          ><br /><br /></z
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <t
+          ><label for="cid"><b>Enter College Id</b></label></t
+        >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input
+          type="text"
+          id="cid"
+          name="cid"
+          placeholder="Student's College Id.."
+        /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <input type="submit" value="Update" />
+      </form>
+    </div>
+  </body>
+</html>

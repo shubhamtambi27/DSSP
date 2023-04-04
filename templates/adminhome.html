@@ -148,7 +148,7 @@
             <p class="w3-large">View Users Record</p>
           </div>
         </a>
-        <a href="">
+        <a onclick="openPopup()">
           <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Send E-Mail Updates</p>
@@ -161,7 +161,7 @@
      <div class="w3-row-padding w3-center" style="margin-top: 64px; padding-left: 250px;">
 
 
-        <a href="">
+        <a href="/takeadminphoto">
           <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
             <p class="w3-large">Take Attendance</p>
@@ -318,6 +318,44 @@
       function w3_close() {
         mySidebar.style.display = "none";
       }
+     function openPopup() {
+      var popup = window.open("", "popup", "width=400,height=400");
+			popup.document.write(`
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<title>Select </title>
+          <style>
+            button.link-button {
+  border: none;
+  background: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button.link-button:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+          </style> 
+				</head>
+				<body>
+					<h1>Select what you want to send!!</h1>
+          <a href="/sendabsent">
+          <button>Send Absentees Name </button>
+          </a>
+          <a href="/sendpresent">
+          <button>Send Present Students Name</button>
+          </a>
+				</body>
+				</html>
+			`);
+		}
     </script>
   </body>
 </html>
