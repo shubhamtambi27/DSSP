@@ -298,32 +298,58 @@
 				<head>
 					<title>Select </title>
           <style>
+            body {
+  background-color: #DCDCDC;
+}
             .popup {
   border: none;
   background: none;
-  color: blue;
+  color: black ;
   text-decoration: underline;
   cursor: pointer;
   padding: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 13px;
 }
 
-.popup:hover {
-  color: darkblue;
-  text-decoration: underline;
+.button1 {
+  background-color: #808080;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 14px;
+  width: 250px;
 }
-
+.button2 {
+  background-color: #808080;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 14px;
+  width: 250px;
+}
           </style> 
 				</head>
 				<body>
           <div class="popup"> 
 					<h1>Select what you want to send!!</h1>
           <a href="/sendabsent">
-          <button>Send Absentees Name </button>
+          <button class="button button1">Send Absentees Name</button>
           </a>
           <a href="/sendpresent">
-          <button>Send Present Students Name</button>
+          <button class="button button2">Send Present Students Name</button>
           </a>
           </div>
 				</body>
