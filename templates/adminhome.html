@@ -293,7 +293,6 @@
         >
       </p>
     </footer>
-
     <script>
       // Modal Image Gallery
       function onClick(element) {
@@ -318,7 +317,7 @@
       function w3_close() {
         mySidebar.style.display = "none";
       }
-     function openPopup() {
+      function openPopup() {
       var popup = window.open("", "popup", "width=400,height=400");
 			popup.document.write(`
 				<!DOCTYPE html>
@@ -326,32 +325,60 @@
 				<head>
 					<title>Select </title>
           <style>
-            button.link-button {
+            body {
+  background-color: #DCDCDC;
+}
+            .popup {
   border: none;
   background: none;
-  color: blue;
+  color: black ;
   text-decoration: underline;
   cursor: pointer;
   padding: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 13px;
 }
 
-button.link-button:hover {
-  color: darkblue;
-  text-decoration: underline;
+.button1 {
+  background-color: #808080;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 14px;
+  width: 250px;
 }
-
+.button2 {
+  background-color: #808080;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 14px;
+  width: 250px;
+}
           </style> 
 				</head>
 				<body>
+          <div class="popup"> 
 					<h1>Select what you want to send!!</h1>
           <a href="/sendabsent">
-          <button>Send Absentees Name </button>
+          <button class="button button1">Send Absentees Name</button>
           </a>
           <a href="/sendpresent">
-          <button>Send Present Students Name</button>
+          <button class="button button2">Send Present Students Name</button>
           </a>
+          </div>
 				</body>
 				</html>
 			`);
