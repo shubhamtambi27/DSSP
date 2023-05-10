@@ -33,7 +33,7 @@ def get_db_connection():
 
 @app.route("/sendpresent")
 def sendpresent():
-   msg = Message('Attendance', sender = '2019pietcssalvader144@poornima.org', recipients = ['s.r.nathaniel01@gmail.com'])
+   msg = Message('Present Students Attendance', sender = '2019pietcssalvader144@poornima.org', recipients = ['s.r.nathaniel01@gmail.com'])
    msg.body = stu_att1
    df = pd.DataFrame(stu_att1)
    print(df)
@@ -43,7 +43,7 @@ def sendpresent():
 
 @app.route("/sendabsent")
 def sendabsent():
-   msg = Message('Attendance', sender = '2019pietcssalvader144@poornima.org', recipients = ['s.r.nathaniel01@gmail.com'])
+   msg = Message('Absent Student Attendance', sender = '2019pietcssalvader144@poornima.org', recipients = ['s.r.nathaniel01@gmail.com'])
    msg.body = stu_att2
    df = pd.DataFrame(stu_att2)
    print(df)
