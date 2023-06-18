@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, url_for, flash, redirect
+from flask import Flask, render_template, request, url_for, flash, redirect, Response
 import os
 import datetime
 import sqlite3
 import pywhatkit
 import smtplib
 import pandas as pd
+import cv2
 from flask_mail import Mail, Message
 x = str(datetime.datetime.now())
 
@@ -14,7 +15,7 @@ mail= Mail(app)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = '2019pietcssalvader144@poornima.org'
-app.config['MAIL_PASSWORD'] = 'Password space'
+app.config['MAIL_PASSWORD'] = 'AMDRyzen7'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -87,37 +88,47 @@ def studenthome():
 def updatestudent():
     return render_template("updatestudent.html")
 
-@app.route("/takephoto")
-def takephoto():
-    import cv2
-    cam_port = 0
-    cam = cv2.VideoCapture(cam_port)
-    result, image = cam.read()
-    if result:
-        cv2.imshow(x, image)
-        cv2.imwrite("attendance.png", image)
-        cv2.waitKey(0)
-        cv2.destroyWindow(x)
-    else:
-        print("No image detected. Please! try again")
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
 
-    return render_template("teacherhome.html")
+# Load the pre-trained face detection model
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
-@app.route("/takeadminphoto")
-def takeadminphoto():
-    import cv2
-    cam_port = 0
-    cam = cv2.VideoCapture(cam_port)
-    result, image = cam.read()
-    if result:
-        cv2.imshow(x, image)
-        cv2.imwrite("attendance.png", image)
-        cv2.waitKey(0)
-        cv2.destroyWindow(x)
-    else:
-        print("No image detected. Please! try again")
+def detect_faces(frame):
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
-    return render_template("adminhome.html")
+    # Draw rectangles around the detected faces
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+    return frame
+
+def generate_frames():
+    camera = cv2.VideoCapture(0)  # Access the webcam (0 represents the default camera)
+
+    while True:
+        success, frame = camera.read()
+        if not success:
+            break
+        else:
+            # Detect faces and draw rectangles around them
+            frame_with_faces = detect_faces(frame)
+
+            # Encode the frame as JPEG
+            ret, buffer = cv2.imencode('.jpg', frame_with_faces)
+
+            # Convert the frame to bytes
+            frame_bytes = buffer.tobytes()
+
+            # Yield the frame to the client
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 @app.route("/viewattendance")
