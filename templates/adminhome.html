@@ -63,7 +63,7 @@
         <a href="/viewattendance" class="w3-bar-item w3-button"
           >VIEW ATTENDANCE</a
         >
-        <a href="/takephoto" class="w3-bar-item w3-button">TAKE ATTENDANCE</a>
+        <a href="{{ url_for('video_feed')}}" target="_blank" class="w3-bar-item w3-button">TAKE ATTENDANCE</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -161,7 +161,7 @@
      <div class="w3-row-padding w3-center" style="margin-top: 64px; padding-left: 250px;">
 
 
-        <a href="/takeadminphoto">
+        <a href="{{ url_for('video_feed')}}" target="_blank">
           <div class="w3-quarter">
             <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
             <p class="w3-large">Take Attendance</p>
